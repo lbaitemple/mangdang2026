@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <base href="..">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=default">
+    </script>
+    <meta name="description" content="MangDang Workshop on Mini Pupper - Program">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="KeyWords" content="ROS, Mini Pupper, IEEE, Workshop, Program, Schedule">
+    <title>Program | MangDang Workshop on Mini Pupper</title>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/banner.jpg" alt="MangDang Workshop on Mini Pupper Banner">
+        <div class="top-left">
+            <span class="title1">MangDang</span><span class="title2">Workshop</span> <span class="year">2026</span>
+        </div>
+        <div class="bottom-right">
+            May 2, 2026 <br> Amy Gutmann Hall, University of Pennsylvania
+        </div>
+    </div>
+
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a title="Workshop Home Page" href=".">Home</a>
+            </td>
+            <td class="navigation">
+                <a title="Register for the Workshop" href="registration">Registration</a>
+            </td>
+            <td class="navigation">
+                <a class="current" title="Workshop Program" href="program">Program</a> 
+            </td>
+            <td class="navigation">
+                <a title="Directions to the Workshop" href="directions">Directions</a>
+            </td>
+            <td class="navigation">
+                <a title="Workshop Resources" href="flyer">Resources</a>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Workshop Program &mdash; May 2, 2026</h2>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                8:30am
+            </td>
+            <td class="title-special">
+                Registration &amp; Coffee
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                Check in, pick up your name badge, and grab a coffee before the workshop begins.
+            </td>
+        </tr>
+    </table>
+
+    <table class="plenary">
+        <tr>
+            <td class="date" rowspan="3">
+                9:00am
+            </td>
+            <td class="title">
+                Welcome &amp; Introduction to the Mini Pupper Competition
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                IEEE R1/R2 Student Activities Committee
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                An overview of the IEEE R1/R2 Student Conference Mini Pupper Competition, 
+                including rules, scoring criteria, and timeline. Learn what your student 
+                teams will need to accomplish and how this workshop prepares you to guide them.
+            </td>
+        </tr>
+    </table>
+
+    <table id="ros-intro">
+        <tr>
+            <td class="date" rowspan="3">
+                9:30am
+            </td>
+            <td class="title">
+                Introduction to ROS2 and the Mini Pupper Platform
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Workshop Instructor
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                A hands-on introduction to ROS2 (Robot Operating System 2) and the Mini Pupper 
+                hardware platform. We&rsquo;ll cover ROS2 concepts including nodes, topics, 
+                services, and launch files, all in the context of controlling a quadruped robot.
+                Participants will set up their development environments and establish 
+                communication with the Mini Pupper units.
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                10:30am
+            </td>
+            <td class="title-special">
+                Coffee &amp; Tea Break
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <!-- Kept for Spacing -->
+            </td>
+        </tr>
+    </table>
+
+    <table id="inverse-kinematics">
+        <tr>
+            <td class="date" rowspan="3">
+                10:45am
+            </td>
+            <td class="title">
+                Inverse Kinematics for Quadruped Robots
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Workshop Instructor
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                A deep dive into inverse kinematics (IK) as it applies to quadruped robots like Mini Pupper.
+                We&rsquo;ll cover the mathematical foundations: given a desired foot position 
+                \((x, y, z)\), compute the joint angles \((\theta_1, \theta_2, \theta_3)\) 
+                for each leg. Topics include coordinate frames, the Denavit&ndash;Hartenberg convention, 
+                geometric approaches to IK, and how these translate to Mini Pupper&rsquo;s 
+                3-DOF leg design.
+            </td>
+        </tr>
+    </table>
+
+    <table id="hands-on-ik">
+        <tr>
+            <td class="date" rowspan="3">
+                11:30am
+            </td>
+            <td class="title">
+                Hands-On Lab: Implementing IK on Mini Pupper
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Workshop Instructors &amp; Lab Assistants
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                Put theory into practice! In this hands-on session, you&rsquo;ll implement 
+                inverse kinematics code for Mini Pupper using ROS2 and Python. 
+                You&rsquo;ll command individual legs to reach target positions and 
+                observe the results in real-time on the physical robot.
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                12:30pm
+            </td>
+            <td class="title-special">
+                Lunch
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <!-- Kept for Spacing -->
+            </td>
+        </tr>
+    </table>
+
+    <table id="gait-control">
+        <tr>
+            <td class="date" rowspan="3">
+                1:30pm
+            </td>
+            <td class="title">
+                Gait Planning &amp; Locomotion Control
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Workshop Instructor
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                Learn how to combine inverse kinematics with gait planning to make Mini Pupper walk, 
+                trot, and navigate obstacles. We&rsquo;ll explore different gait patterns 
+                (crawl, trot, pace) and how to generate smooth foot trajectories using 
+                B&eacute;zier curves. This session bridges the gap between single-leg IK 
+                and full-body coordinated movement.
+            </td>
+        </tr>
+    </table>
+
+    <table id="hands-on-gait">
+        <tr>
+            <td class="date" rowspan="3">
+                2:15pm
+            </td>
+            <td class="title">
+                Hands-On Lab: Gait Programming Challenge
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Workshop Instructors &amp; Lab Assistants
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                Work in teams to program your Mini Pupper to complete a locomotion challenge! 
+                Apply the gait planning concepts to make your robot walk through a simple 
+                course. This activity mirrors the types of tasks your students will encounter 
+                in the competition.
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                3:00pm
+            </td>
+            <td class="title-special">
+                Coffee &amp; Tea Break
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <!-- Kept for Spacing -->
+            </td>
+        </tr>
+    </table>
+
+    <table id="competition-prep">
+        <tr>
+            <td class="date" rowspan="3">
+                3:15pm
+            </td>
+            <td class="title">
+                Competition Preparation &amp; Mentoring Strategies
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                IEEE R1/R2 Student Activities Committee
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                Practical advice for faculty advisors on how to structure your student 
+                team&rsquo;s preparation for the competition. Topics include team formation, 
+                training schedules, common pitfalls, debugging strategies, and how to 
+                leverage ROS2 documentation and community resources.
+            </td>
+        </tr>
+    </table>
+
+    <table class="plenary">
+        <tr>
+            <td class="date" rowspan="3">
+                4:00pm
+            </td>
+            <td class="title">
+                Mini Competition Demo &amp; Wrap-Up
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                All Participants
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                A fun mini-competition where teams showcase what they&rsquo;ve built 
+                during the workshop. Followed by a Q&amp;A session, resource sharing, 
+                and closing remarks. Participants will leave with all code, documentation, 
+                and a roadmap to bring back to their student branches.
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                4:45pm
+            </td>
+            <td class="title-special">
+                Workshop Concludes
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                Thank you for attending! Safe travels.
+            </td>
+        </tr>
+    </table>
+
+    <footer>
+        &copy; IEEE MangDang Workshop on Mini Pupper
+        &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
+    </footer>
+
+</body>
+</html>
