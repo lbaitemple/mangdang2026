@@ -88,8 +88,8 @@ th,td{
 .year{color: #505050; font-size:0.67em; font-weight: lighter;}
 
 /* Navigation Links (Home, Registration, etc) */
-table.navigation{width:800px;}
-td.navigation{font-size:1.67em; white-space:nowrap; width:20%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
+table.navigation{width:1000px;}
+td.navigation{font-size:1.35em; white-space:nowrap; width:auto; text-align:center; vertical-align:middle; padding:0px 12px 0px 12px;}
 
 /* Sponsor Images */
 table.sponsors{width:800px;}
@@ -155,6 +155,6 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     p{font-size:1.5em; line-height:1.5em;}
     th,td,tr{font-size:1.5em; line-height:1.5em;}
     td.date{font-size:1em; padding-top:0.5em;}
-    td.navigation{font-size:1.5em; padding:0px 20px 0px 20px;}
+    td.navigation{font-size:1.2em; padding:0px 12px 0px 12px;}
     table.footer{font-size:0.33em;}
 }
