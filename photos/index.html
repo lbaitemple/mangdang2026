@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="../">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <meta name="description" content="Mini Pupper Workshop photo album">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <title>Workshop Photo Album</title>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/banner.jpg" alt="PhysicalAI Workshop Banner">
+        <div class="top-left">
+            <span class="title1">PhysicalAI</span><span class="title2"> Workshop</span> <span class="year">2026</span>
+        </div>
+        <div class="bottom-right">
+            May 2, 2026 <br> Amy Gutmann Hall, University of Pennsylvania
+        </div>
+    </div>
+
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a title="Workshop Home Page" href=".">Home</a>
+            </td>
+            <td class="navigation">
+                <a title="Register for the Workshop" href="registration">Registration</a>
+            </td>
+            <td class="navigation">
+                <a title="Workshop Program" href="program">Program</a>
+            </td>
+            <td class="navigation">
+                <a title="Directions to the Workshop" href="directions">Directions</a>
+            </td>
+            <td class="navigation">
+                <a title="Hotel &amp; Accommodations" href="hotel">Hotel</a>
+            </td>
+            <td class="navigation">
+                <a class="current" title="Workshop Photos" href="photos">Photos</a>
+            </td>
+            <td class="navigation">
+                <a title="Workshop Resources" href="flyer">Resources</a>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Workshop Photo Album</h2>
+    <p>
+        These images are pulled directly from the public GitHub release assets for the workshop,
+        so the website can display them as a real photo album instead of a raw file list.
+    </p>
+
+    <p id="album-status" class="album-status">Loading photos…</p>
+    <div id="album-grid" class="album-grid"></div>
+
+    <script>
+        const albumGrid = document.getElementById('album-grid');
+        const albumStatus = document.getElementById('album-status');
+
+        async function loadPhotos() {
+            albumStatus.textContent = 'Loading photos…';
+            try {
+                const response = await fetch('https://api.github.com/repos/lbaitemple/mangdang2026/releases/tags/photos');
+                if (!response.ok) {
+                    throw new Error('Unable to load the GitHub release data.');
+                }
+
+                const data = await response.json();
+                const imageAssets = (data.assets || [])
+                    .filter((asset) => /\.(jpe?g|png|gif|webp|bmp|tiff?)$/i.test(asset.name))
+                    .sort((a, b) => a.name.localeCompare(b.name));
+
+                if (!imageAssets.length) {
+                    albumStatus.textContent = 'No photos were found in the release yet.';
+                    return;
+                }
+
+                albumStatus.textContent = `Showing ${imageAssets.length} photos from the workshop release.`;
+                albumGrid.innerHTML = '';
+
+                imageAssets.forEach((asset) => {
+                    const card = document.createElement('figure');
+                    card.className = 'album-card';
+
+                    const img = document.createElement('img');
+                    img.src = asset.browser_download_url;
+                    img.alt = asset.name;
+                    img.loading = 'lazy';
+
+                    const caption = document.createElement('figcaption');
+                    caption.textContent = asset.name.replace(/\.(jpe?g|png|gif|webp|bmp|tiff?)$/i, '');
+
+                    card.appendChild(img);
+                    card.appendChild(caption);
+                    albumGrid.appendChild(card);
+                });
+            } catch (error) {
+                albumStatus.textContent = 'The photo album could not be loaded right now. Please try again in a moment.';
+                console.error(error);
+            }
+        }
+
+        loadPhotos();
+    </script>
+
+    <footer>
+        &copy; IEEE Mini Pupper Workshop
+        &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
+    </footer>
+
+</body>
+</html>
